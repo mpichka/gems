@@ -134,7 +134,7 @@ table {
 
 * {
   box-sizing: border-box;
-  font-family: Roboto,
+  font-family: Roboto-Regular,
     -apple-system,
     BlinkMacSystemFont,
     'Helvetica Neue',
@@ -144,6 +144,7 @@ table {
     'Cantarell',
     'Open Sans',
     sans-serif;
+  font-size: 16px;
 }
 
 input:-webkit-autofill,

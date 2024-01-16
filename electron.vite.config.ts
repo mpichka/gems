@@ -1,6 +1,7 @@
-import { resolve } from 'path'
-import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
-import vue from '@vitejs/plugin-vue'
+import vue from "@vitejs/plugin-vue"
+import { defineConfig, externalizeDepsPlugin } from "electron-vite"
+import { resolve } from "path"
+import svgLoader from "vite-svg-loader"
 
 export default defineConfig({
   main: {
@@ -12,9 +13,11 @@ export default defineConfig({
   renderer: {
     resolve: {
       alias: {
-        '@renderer': resolve('src/renderer/src')
+        "@renderer": resolve("src/renderer/src"),
+        "@icons": resolve("src/renderer/src/assets/icons"),
+        "@components": resolve("src/renderer/src/components")
       }
     },
-    plugins: [vue()]
+    plugins: [vue(), svgLoader()]
   }
 })

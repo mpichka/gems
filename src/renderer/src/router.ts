@@ -1,11 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import Home from './views/Home.vue'
-import ProductCreator from './views/ProductCreator.vue'
 
-const routes: Readonly<RouteRecordRaw[]> = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/product/new', name: 'New Product', component: ProductCreator }
-]
+const routes: Readonly<RouteRecordRaw[]> = [{ path: '/', name: 'Home', component: Home }]
 
 const router = createRouter({
   history: createWebHistory(),

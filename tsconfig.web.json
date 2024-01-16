@@ -12,7 +12,13 @@
     "paths": {
       "@renderer/*": [
         "src/renderer/src/*"
-      ]
+      ],
+      "@icons/*": [
+        "src/renderer/src/assets/icons/*"
+      ],
+      "@components/*": [
+        "src/renderer/src/components/*"
+      ],
     }
   }
 }
