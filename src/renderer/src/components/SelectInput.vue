@@ -9,7 +9,11 @@
         @focus="focusInput"
         @input="search"
       />
-      <i :class="focused && filteredOptions.length ? 'icon-focus' : 'icon-blur'" class="icon">
+      <i
+        :class="focused && filteredOptions.length ? 'icon-focus' : 'icon-blur'"
+        class="icon"
+        @click="focusInput"
+      >
         <Chevron height="12" width="12" />
       </i>
     </div>
@@ -79,6 +83,7 @@ const selectItem = (index: number) => {
 <style scoped>
 .icon {
   fill: #bbb;
+  cursor: pointer;
 }
 .icon-focus {
   rotate: 180deg;
