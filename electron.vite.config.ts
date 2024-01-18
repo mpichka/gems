@@ -5,9 +5,19 @@ import svgLoader from "vite-svg-loader"
 
 export default defineConfig({
   main: {
+    resolve: {
+      alias: {
+        "@server": resolve("src/main/src")
+      }
+    },
     plugins: [externalizeDepsPlugin()]
   },
   preload: {
+    resolve: {
+      alias: {
+        "@server": resolve("src/main/src")
+      }
+    },
     plugins: [externalizeDepsPlugin()]
   },
   renderer: {

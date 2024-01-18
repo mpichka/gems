@@ -18,7 +18,7 @@
 import { ref } from "vue"
 
 type Props = {
-  suffix: string
+  suffix?: string
 }
 defineProps<Props>()
 
@@ -50,7 +50,7 @@ const validateNumber = (e) => {
   border-radius: 8px;
   border: 1px solid #bbb;
   background-color: #fff;
-  width: 240px;
+  width: 100%;
   margin: 4px;
   padding: 3px 0.5rem;
 }

@@ -4,7 +4,8 @@
     "src/renderer/src/env.d.ts",
     "src/renderer/src/**/*",
     "src/renderer/src/**/*.vue",
-    "src/preload/*.d.ts"
+    "src/preload/index.d.ts",
+    "src/main/src/**/*",
   ],
   "compilerOptions": {
     "composite": true,
@@ -18,6 +19,9 @@
       ],
       "@components/*": [
         "src/renderer/src/components/*"
+      ],
+      "@server/*": [
+        "src/main/src/*"
       ],
     }
   }
