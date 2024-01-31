@@ -3,8 +3,8 @@
   "include": [
     "src/renderer/src/env.d.ts",
     "src/renderer/src/**/*",
-    "src/renderer/src/**/*.vue",
-    "src/preload/index.d.ts",
+    "src/renderer/src/**/*.{vue|ts}",
+    "src/preload/*",
     "src/main/src/**/*",
   ],
   "compilerOptions": {
@@ -19,6 +19,9 @@
       ],
       "@components/*": [
         "src/renderer/src/components/*"
+      ],
+      "@hooks/*": [
+        "src/renderer/src/hooks/*"
       ],
       "@server/*": [
         "src/main/src/*"

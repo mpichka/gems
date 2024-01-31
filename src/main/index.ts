@@ -18,7 +18,7 @@ function createWindow(): void {
   })
 
   // TODO: debug
-  mainWindow.setAlwaysOnTop(true)
+  // mainWindow.setAlwaysOnTop(true)
 
   mainWindow.on("ready-to-show", () => {
     mainWindow.show()

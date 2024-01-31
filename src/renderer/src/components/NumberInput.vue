@@ -44,7 +44,7 @@ const validateNumber = (e) => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .select {
   display: inline-block;
   border-radius: 8px;
@@ -64,10 +64,10 @@ const validateNumber = (e) => {
   width: 100%;
   border: none;
   color: #333;
-}
 
-.input:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .input-container {

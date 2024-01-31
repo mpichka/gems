@@ -1,10 +1,6 @@
-import { electronAPI } from "@electron-toolkit/preload"
-// import * as api from "@server/routes"
+import { electronAPI, type ElectronAPI } from "@electron-toolkit/preload"
+import * as api from "@server/routes"
 import { contextBridge } from "electron"
-
-const api = {
-  hi: () => console.log("hi")
-}
 
 // Use `contextBridge` APIs to expose Electron APIs to
 // renderer only if context isolation is enabled, otherwise
@@ -24,3 +20,10 @@ if (process.contextIsolated) {
 }
 
 export type ServerAPI = typeof api
+
+declare global {
+  interface Window {
+    electron: ElectronAPI
+    api: ServerAPI
+  }
+}

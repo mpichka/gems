@@ -18,7 +18,7 @@
       </i>
     </div>
     <div v-if="focused" class="dialog-bg" @click="closeDialog"></div>
-    <div v-if="focused && filteredOptions.length" ref="dialog" class="dropdown">
+    <div v-if="focused && filteredOptions.length" class="dropdown">
       <ul>
         <li
           v-for="(option, index) in filteredOptions"
@@ -51,7 +51,6 @@ const props = withDefaults(defineProps<Props>(), {
 const focused = ref(false)
 const text = ref("")
 const select = ref({ index: -1, value: "" })
-const dialog = ref(null)
 const filteredOptions = ref<string[]>(props.options)
 
 const search = () => {
@@ -80,11 +79,12 @@ const selectItem = (index: number) => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .icon {
   fill: #bbb;
   cursor: pointer;
 }
+
 .icon-focus {
   rotate: 180deg;
   transition: rotate 0.2s ease-in-out;
@@ -95,6 +95,7 @@ const selectItem = (index: number) => {
 }
 
 .select {
+  position: relative;
   display: inline-block;
   border-radius: 8px;
   border: 1px solid #bbb;
@@ -119,18 +120,18 @@ const selectItem = (index: number) => {
   width: 100%;
   border: none;
   color: #333;
-}
 
-.input:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .dropdown {
   position: absolute;
   margin: 8px 0 0 -0.5rem;
   background-color: #fff;
-  width: 240px;
-  border: 1px solid #bbb;
+  width: 100%;
+  outline: 1px solid #bbb;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   color: #000;
@@ -140,13 +141,16 @@ const selectItem = (index: number) => {
   border-radius: 6px;
   padding: 8px 6px;
   margin: 4px;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &:active {
+    background-color: #bbb;
+  }
 }
-.dropdown-item:hover {
-  background-color: #eee;
-}
-.dropdown-item:active {
-  background-color: #bbb;
-}
+
 .item-active {
   background-color: #eee;
 }

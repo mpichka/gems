@@ -25,7 +25,8 @@ export default defineConfig({
       alias: {
         "@renderer": resolve("src/renderer/src"),
         "@icons": resolve("src/renderer/src/assets/icons"),
-        "@components": resolve("src/renderer/src/components")
+        "@components": resolve("src/renderer/src/components"),
+        "@hooks": resolve("src/renderer/src/hooks")
       }
     },
     plugins: [vue(), svgLoader()]

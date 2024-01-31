@@ -1,5 +1,5 @@
 import { randomId } from "@server/utils/random"
 
-export async function getRandomId() {
+export function getRandomId(): string {
   return randomId()
 }

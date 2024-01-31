@@ -18,7 +18,7 @@ const blurInput = () => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .select {
   display: inline-block;
   border-radius: 8px;
@@ -38,9 +38,9 @@ const blurInput = () => {
   width: 100%;
   border: none;
   color: #333;
-}
 
-.input:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 </style>

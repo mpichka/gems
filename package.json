@@ -24,6 +24,7 @@
     "@electron-toolkit/utils": "^2.0.0",
     "electron-updater": "^6.1.1",
     "pinia": "^2.1.7",
+    "sass": "^1.70.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
